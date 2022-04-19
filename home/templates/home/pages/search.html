@@ -8,6 +8,10 @@
       <div class="col">
         {% include 'home/partials/_cards.html' %}
       </div>
+      {% empty %}
+        <div class="col">
+            <h1>No recipes found here 🥲</h1>
+        </div>
       {% endfor %}
 
     </div>

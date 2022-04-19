@@ -1,0 +1,6 @@
+<div class="container">
+    <form action="{% url 'polls:search' %}" method="GET" class="search-form" class="d-flex" >
+      <input class="form-control me-2" aria-label="Search" name="search" value="{{search_term}}" required>
+      <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
+</div>
