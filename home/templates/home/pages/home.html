@@ -6,44 +6,11 @@
 
   <div class="container-md mx-auto mt-5">
     <div class="row p-2">
-
+      {% for video in videos %}
       <div class="col">
         {% include 'home/partials/_cards.html' %}
       </div>
-      <div class="col">
-        {% include 'home/partials/_cards.html' %}
-      </div>
-      <div class="col">
-        {% include 'home/partials/_cards.html' %}
-      </div>
-      <div class="col">
-        {% include 'home/partials/_cards.html' %}
-      </div>
-      <div class="col">
-        {% include 'home/partials/_cards.html' %}
-      </div>
-      <div class="col">
-        {% include 'home/partials/_cards.html' %}
-      </div>
-      <div class="col">
-        {% include 'home/partials/_cards.html' %}
-      </div>
-      <div class="col">
-        {% include 'home/partials/_cards.html' %}
-      </div>
-      <div class="col">
-        {% include 'home/partials/_cards.html' %}
-      </div>
-      <div class="col">
-        {% include 'home/partials/_cards.html' %}
-      </div>
-      <div class="col">
-        {% include 'home/partials/_cards.html' %}
-      </div>
-      <div class="col">
-        {% include 'home/partials/_cards.html' %}
-      </div>
-
+      {% endfor %}
 
     </div>
   

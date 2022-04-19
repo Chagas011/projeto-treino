@@ -1,0 +1,20 @@
+{% extends 'homes/base.html' %}
+
+{% block conteudo %}
+{% include 'home/partials/_nav.html' %}
+
+
+  <div class="container-md mx-auto mt-5">
+    <div class="row p-2">
+      {% for video in videos %}
+      <div class="col">
+        {% include 'home/partials/_cards.html' %}
+      </div>
+      {% endfor %}
+
+    </div>
+  
+    
+  </div>
+
+{% endblock conteudo %}

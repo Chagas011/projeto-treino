@@ -1,12 +1,18 @@
+
+
 <div class="row">
   <div class="card" style="width: 18rem;">
-    <img src="..." class="card-img-top" alt="...">
+    <a href="{% url 'polls:v' video.id %}" class="text-decoration-none">
+      <img src="{{video.imagem.url}}" class="card-img-top img-fluid" alt="">
+    </a> 
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <a href="{% url 'polls:video' %}" class="text-decoration-none"><h7 class="card-title ">Author</h7></a>   
-      <p class="text-start"><a href="{% url 'polls:video' %}" class="text-decoration-none"><h7 class="card-title text-decoration-none">Categorys</h7></a></p>   
-      <p class="card-text">Some quick example text to build on the card title and  up the  of the card's content.</p>
-      <a href="{% url 'polls:home' %}" class="btn btn-primary">Go somewhere</a>
+      <h5 class="card-title">{{video.titulo}}</h5>
+      <a href="{% url 'polls:v' video.id %}" class="text-decoration-none"><h7 class="card-title ">{{video.autor}}</h7></a>   
+      <p class="text-start"><a href="{% url 'polls:categoria' video.categoria.id%}" class="text-decoration-none"><h7 class="card-title text-decoration-none">{{video.categoria}}</h7></a></p>   
+      <p class="card-text">{{video.descricao}}</p>
+      <p class="card-text">{{video.data_criacao}}</p>
+      <a href="{% url 'polls:v' video.id%}" class="btn btn-primary">Go somewhere</a>
     </div>
   </div>
 </div>
+

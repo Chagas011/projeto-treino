@@ -4,18 +4,16 @@
 {% include 'home/partials/_nav.html' %}
 
 
-<div class="container-fluid mx-auto">
+<div class="container-md mx-auto">
     <div class="row p-2 mt-5">
-
-      <div class="card bg-dark text-white">
-        <img src="https://via.placeholder.com/320x180.png/269fe6" class="card-img" alt="...">
+      <div class="card bg-dark text-black">
+        <img src="{{videos.imagem.url}}" class="card-img" alt="...">
         <div class="card-img-overlay">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          <p class="card-text">Last updated 3 mins ago</p>
+          <h5 class="card-title">{{videos.titulo}}</h5>
+          <p class="card-text">{{videos.descricao}}</p>
+          <p class="card-text">{{videos.tempo}} Minutos </p>
         </div>
       </div>
-
     </div>
   
     
