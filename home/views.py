@@ -1,3 +1,4 @@
+from django.contrib import messages
 from django.db.models import Q
 from django.http import Http404
 from django.shortcuts import get_list_or_404, get_object_or_404, render
@@ -9,7 +10,7 @@ from .models import Video
 
 def home(request):
     videos = get_list_or_404(Video, publicado=True)
-
+    messages.success(request, 'Welcome')
     return render(request, 'home/pages/home.html', context={
         'videos': videos
     })
@@ -37,6 +38,7 @@ def search(request):
     if not search_term:
         raise Http404()
 
+    messages.success(request, 'Busca encontrada')
     videos = Video.objects.filter(
         Q(
             Q(titulo__icontains=search_term) |
