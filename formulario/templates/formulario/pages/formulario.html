@@ -1,5 +1,32 @@
 {% extends 'homes/base.html' %}
 
+
 {% block conteudo %}
-    <h1>hello world</h1>
+<div class="container"> 
+
+    <form action="{% url 'forms:create' %}" method="post">
+        {% csrf_token %}
+
+
+      <div class="container mt-3">
+        {% for field in form %}
+
+        <div class="form-group">
+            <label for="{{field.id_for_label}}">{{field.label}}</label>
+            <input type="email" class="form-control" id="{{field.id_for_label}}">
+        </div>
+
+        {% if field.help_text %}
+            <p class="help-text">{{field.help_text}}</p>
+        {% endif %}
+
+        {{field.errors}}
+        
+        {% endfor %}
+          <button type="submit" class="btn btn-primary mt-2">Submit</button>
+
+        </div>  
+    </form>
+
+</div>
 {% endblock conteudo %}
